@@ -1,0 +1,6 @@
+[submodule "bib-piotrm"]
+	path = bib-piotrm
+	url = git@github.com:piotrm0/bib-piotrm.git
+[submodule "autopub"]
+	path = autopub
+	url = git@github.com:piotrm0/autopub.git
