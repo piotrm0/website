@@ -1,0 +1,31 @@
+<html>
+  <TMPL_INCLUDE NAME="templates/head.html.tmpl"/>
+  <body>
+
+    <div>
+      <img class="mug" src="images/wolf_gap1_mug.jpg"/>
+      <p>
+        I'm a post-doc
+        at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.cylab.cmu.edu">CyLab</a>,
+        working
+        under <a href="http://www.andrew.cmu.edu/user/danupam/">Anupam
+          Datta</a> on algorithmic transparency and related problems.
+      </p>
+
+      <p>&lt;--- this guy</p>
+              
+      <p><h3>topics</h3>
+        <ul>
+          <li>algorithmic transparency</li>
+          <li>probabilistic abstract interpretation</li>
+          <li>quantitative information flow</li>
+          <li>static analysis for side channels in java bytecode</li>
+          <li>build it,break it,fix it secure programming contest</li>
+        </ul>
+      </p>
+
+      <p><h3>papers</h3>
+        <TMPL_INCLUDE NAME="../build/pubs/summary.shtml"/>
+    </div>
+  </body>
+</html>

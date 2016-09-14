@@ -61,11 +61,18 @@ sub rel_url {
 }
 
 sub setup_dirs {
-  my @dirs = ($DIR_TARGET);
+  my @dirs = ($DIR_TARGET,
+              $DIR_TARGET . "/images",
+              $DIR_TARGET . "/css");
 
   foreach my $dir (@dirs) {
     if (! -e $dir) {
       make_dir($dir);
     }
   }
+
+  foreach my $dir ("images", "css") {
+    run_cmd("cp -R $DIR_SOURCE/$dir/* $DIR_TARGET/$dir/");
+  }
+
 }

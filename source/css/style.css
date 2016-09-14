@@ -1,0 +1,8 @@
+a       { background-color: #ddddff; }
+a:hover { background-color: #bbbbff; }
+
+.mug {
+  padding-right : 20px;
+  padding-bottom: 20px;
+  float: left;
+}
