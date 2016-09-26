@@ -63,6 +63,7 @@ sub rel_url {
 sub setup_dirs {
   my @dirs = ($DIR_TARGET,
               $DIR_TARGET . "/images",
+              $DIR_TARGET . "/docs",
               $DIR_TARGET . "/css");
 
   foreach my $dir (@dirs) {
@@ -71,7 +72,7 @@ sub setup_dirs {
     }
   }
 
-  foreach my $dir ("images", "css") {
+  foreach my $dir ("images", "css", "docs") {
     run_cmd("cp -R $DIR_SOURCE/$dir/* $DIR_TARGET/$dir/");
   }
 

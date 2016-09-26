@@ -1,8 +1,120 @@
-a       { background-color: #ddddff; }
-a:hover { background-color: #bbbbff; }
+a       { background-color: #eeeeff; }
+a:hover { background-color: #ddddff; }
 
 .mug {
-  padding-right : 20px;
-  padding-bottom: 20px;
-  float: left;
+
 }
+
+/* http://stackoverflow.com/questions/10428720/how-to-keep-indent-for-second-line-in-ordered-lists-via-css */
+ol {
+    counter-reset: foo;
+    display: table;
+}
+
+ol > li {
+    counter-increment: foo;
+    display: table-row;
+}
+
+ol > li::before {
+    content: counter(foo) ".";
+    display: table-cell;
+    text-align: right;
+}
+
+
+.icon > svg, .icon img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle; }
+.icon > svg path, .icon img path {
+    fill: #828282; }
+
+/* autopub */
+/* papers, all_papers */
+
+
+/* author */
+
+.author_info {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.author_left {
+  padding: 10px;
+  width: 150px;
+  vertical-align: top;
+}
+
+.author_right {
+  padding-left: 10px;
+  vertical-align: top;
+  align: left;
+}
+
+.author_portrait {
+  width: 150px;
+}
+
+/* keyword */
+
+/* paper */
+
+.bibtex {
+  padding: 10px;
+}
+
+/* project same as author */
+
+/* piece_author_link */
+
+.paper_author {
+  border-top: 1px solid #bbbbbb;
+  border-right: 1px solid #bbbbbb;
+  border-bottom: 1px solid #999999;
+  border-left: 1px solid #999999;
+  margin-left: 2px;
+  margin-bottom: 2px;
+
+  float: left;
+  padding: 5px;
+}
+
+.author_icon {
+  background: white;
+  margin-right: 5px;
+  float: left;
+  height: 36px;
+}
+
+/* piece_author_link_plain */
+
+/* piece_head */
+
+/* piece_keywords_list */
+
+/* piece_paper */
+
+.year_mark {
+  width: 40px;
+  vertical-align: top;
+}
+
+.paper_table {
+
+}
+
+.paper_refnum {
+  width: 20px;
+  vertical-align: top;
+}
+
+.paper_info {
+  vertical-align: top;
+}
+
+/* piece_papers_list */
+
+/* piece_projects_list */

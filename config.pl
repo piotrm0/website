@@ -2,7 +2,8 @@ use strict;
 
 package Config;
 
-our $URL_ROOT   = "file:///Users/piotrm/github/website/build";
+#our $URL_ROOT   = "file:///Users/piotrm/github/website/build";
+our $URL_ROOT   = "http://piotr.mardziel.com";
 our $SITE_TITLE = "Piotr (Peter) Mardziel";
 
 our $DIR_BUILD  = "build";
