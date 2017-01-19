@@ -1,32 +1,44 @@
-<html>
+<html lang="en">
   <TMPL_INCLUDE NAME="templates/head.html.tmpl"/>
   <body>
-    <table border="0" cellspacing="10"><tr><td valign="top" align="right">
-          <img class="mug" src="images/wolf_gap1_mug.jpg"/><br/><br/>
-
-          Piotr (Peter) Mardziel<br/>
-          <a href="mailto:piotrm@gmail.com">piotrm@gmail.com</a><br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-sm-12">
           <br/>
 
-          <a href="https://github.com/piotrm0"><span>piotrm0</span></a>
-          <span class="icon"><img src="images/icon_github.svg"/></span>
-          <br/>
+          <div class="row">
 
-          <a href="https://bitbucket.org/piotrm"><span>piotrm</span></a>
-          <span class="icon"><img src="images/icon_bitbucket.svg"/></span>
-          <br/>
+            <div class="col-xs-12 col-sm-4 col-md-12">
+              <img class="img-rounded img-responsive" src="images/wolf_gap1_mug.jpg"/><br/>
+
+            </div>
+            <div class="col-xs-12 col-sm-8 col-md-12">
+              Piotr (Peter) Mardziel<br/>
+              <a href="mailto:piotrm@gmail.com">piotrm@gmail.com</a><br/>
+              <br/>
+
+              <a href="https://github.com/piotrm0"><span>piotrm0</span></a>
+              <span class="icon"><img src="images/icon_github.svg"/></span>
+              <br/>
+
+              <a href="https://bitbucket.org/piotrm"><span>piotrm</span></a>
+              <span class="icon"><img src="images/icon_bitbucket.svg"/></span>
+              <br/>
           
-          <a href="https://twitter.com/piotrm0"><span>piotrm0</span></a>
-          <span class="icon"><img src="images/icon_twitter.svg"/></span>     
-          <br/>
+              <a href="https://twitter.com/piotrm0"><span>piotrm0</span></a>
+              <span class="icon"><img src="images/icon_twitter.svg"/></span>     
+              <br/>
 
-          </br>
+              </br>
           
-          <a href="http://www.cmu.edu">CMU</a><br/>
-          <a href="http://www.cylab.cmu.edu">CyLab</a><br/>
-          <a href="http://www.cs.umd.edu/projects/PL/">PLUM</a><br/>
-          
-        </td><td>
+              <a href="http://www.cmu.edu">CMU</a><br/>
+              <a href="http://www.cylab.cmu.edu">CyLab</a><br/>
+              <a href="http://www.cs.umd.edu/projects/PL/">PLUM</a><br/>
+            </div>
+          </div>
+        </div>
+        
+    <div class="col-md-10 col-sm-12">
       <p>
         <h3>Piotr (Peter) Mardziel</h3>
         I'm a post-doc
@@ -36,7 +48,7 @@
           Datta</a> on algorithmic transparency and related problems.
       </p>
 
-      <p>&lt;-- this guy</p>
+      <!-- <p>&lt;-- this guy</p> -->
 
       <p><h3>topics</h3>
         <TMPL_INCLUDE NAME="../build/pubs/topics.shtml"/></p>
@@ -44,34 +56,23 @@
       <p><h3>papers</h3>
         <TMPL_INCLUDE NAME="../build/pubs/papers.shtml"/></p>
 
-      <p><h3>talks</h3>
-        <ol>
-          <li>[<a href="docs/mardziel15hcss.pres.pptx">pptx</a>]
-            Models and Games for Quantifying Vulnerability of Secret
-            Information</li>
-          <li>[<a href="docs/mardziel15dagstuhl.pres.pptx">pptx</a>]
-            Probabilistic Programming for Security</li>
-          <li>[<a href="docs/mardziel15thesis.latest-pres.pptx">pptx</a>]
-            Modeling, Measuring, and Limiting Adversary Knowledge</li>
-          <li>[<a href="docs/mardziel14loss.pres.pdf">pdf</a>]
-            Adversary Gain vs. Defender Loss in Quantified Information
-            Flow</li>
-          <li>[<a href="docs/mardziel14time.pres.pdf">pdf</a>]
-            Quantifying Information Flow for Dynamic Secrets</li>
-          <li>[<a href="docs/mardziel12probabilistic.pres.pptx">pptx</a>]
-            Probabilistic Computation for Information Security</li>
-          <li>[<a href="docs/mardziel12smc.pres.pptx">pptx</a>]
-            Knowledge-Oriented Secure Multiparty Computation</li>
-          <li>[<a href="docs/mardziel11dynamic.pres.pptx">pptx</a>]
-            Dynamic Enforcement of Knowledge-based Security Policies
-            (using Probabilistic Abstract Interpretation)</li>
+      <h3>talks</h3>
+        <ol class="list-group">
+          <li class="list-group-item">[<a href="docs/mardziel15hcss.pres.pptx">pptx</a>] Models and Games for Quantifying Vulnerability of Secret Information</li>
+          <li class="list-group-item">[<a href="docs/mardziel15dagstuhl.pres.pptx">pptx</a>] Probabilistic Programming for Security</li>
+          <li class="list-group-item">[<a href="docs/mardziel15thesis.latest-pres.pptx">pptx</a>] Modeling, Measuring, and Limiting Adversary Knowledge</li>
+          <li class="list-group-item">[<a href="docs/mardziel14loss.pres.pdf">pdf</a>] Adversary Gain vs. Defender Loss in Quantified Information Flow</li>
+          <li class="list-group-item">[<a href="docs/mardziel14time.pres.pdf">pdf</a>] Quantifying Information Flow for Dynamic Secrets</li>
+          <li class="list-group-item">[<a href="docs/mardziel12probabilistic.pres.pptx">pptx</a>] Probabilistic Computation for Information Security</li>
+          <li class="list-group-item">[<a href="docs/mardziel12smc.pres.pptx">pptx</a>] Knowledge-Oriented Secure Multiparty Computation</li>
+          <li class="list-group-item">[<a href="docs/mardziel11dynamic.pres.pptx">pptx</a>]
+          Dynamic Enforcement of Knowledge-based Security Policies (using Probabilistic Abstract Interpretation)</li>
         </ol>
-      </p>
         
       <p><h3>tech-reports</h3>
         <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/></p>
 
-        
-    </td></tr></table>
+    </div>
+      </div>
   </body>
 </html>

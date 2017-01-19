@@ -1,0 +1,7 @@
+.icon > svg, .icon img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle; }
+.icon > svg path, .icon img path {
+    fill: #828282; }
