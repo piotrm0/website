@@ -1,3 +1,6 @@
+use Cwd;
+use lib cwd;
+
 if (scalar(@ARGV) != 1) {
   die "Configuration file not specified."
 } else {

@@ -1,12 +1,14 @@
-all: source/* config.pl
+PWD := $(shell pwd)
+
+all: source/* $(PWD)/config.pl
 	make pubs
 	make site
 
 site: source/* config.pl
-	perl gen.pl config.pl
+	perl gen.pl $(PWD)/config.pl
 
 pubs: bib-piotrm/mardziel.bib config.pl
-	perl autopub/gen.pl config.pl
+	perl autopub/gen.pl $(PWD)/config.pl
 
 clean:
 	rm -Rf build
