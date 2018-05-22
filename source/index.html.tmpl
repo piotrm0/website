@@ -1,53 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <head>
+    <!--<link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">-->
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="css/style_min.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous">
+    </script>
+    
+  </head>
+
   <TMPL_INCLUDE NAME="templates/head.html.tmpl"/>
   <body>
     <div class="container-fluid">
       
       <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-offset-0
+                    col-sm-5  col-sm-offset-0
+                    col-md-4  col-md-offset-0
+                    col-lg-3  col-lg-offset-0
+                    col-xl-2  col-xl-offset-0">
           
           <div class="row">
-            <div class="col-xs-10 col-sm-6 col-md-12 col-lg-12
-                        col-xs-offset-1 col-sm-offset-0
-                        col-md-offset-0 col-lg-offset-0">
+
+            <div class="col-6
+                        col-sm-12
+                        col-md-12
+                        col-lg-12
+                        col-xl-12">
+              
               <img style="margin-bottom:20px;"
-                   class="img-rounded img-responsive"
+                   class="rounded img-fluid"
                    src="images/mug_2017-10-19.jpg"/>
-              <!--<img style="margin-bottom:20px;" class="img-rounded img-responsive" src="images/science.jpeg"/>-->
+              <!-- <img style="margin-bottom:20px;" class="img-rounded img-responsive" src="images/science.jpeg"/> -->
+              <h2>Piotr (Peter) Mardziel</h2>
             </div>
             
-            <div style="padding-left:0px;" class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 style="margin-top:0px;">Piotr (Peter) Mardziel</h1></div>
+            <div class="col-6
+                        col-sm-12
+                        col-md-12
+                        col-lg-12
+                        col-xl-12">
 
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <a href="mailto:piotrm@gmail.com">piotrm@gmail.com</a><br/>
-                <a href="https://github.com/piotrm0"><span>piotrm0</span></a>
-                <span class="icon"><img src="images/icon_github.svg"/></span><br/>
-                <a href="https://bitbucket.org/piotrm"><span>piotrm</span></a>
-                <span class="icon"><img src="images/icon_bitbucket.svg"/></span><br/>
-                <a href="https://twitter.com/piotrm0"><span>piotrm0</span></a>
-                <span class="icon"><img src="images/icon_twitter.svg"/></span><br/><br/>
+              <div class="row">
+                <div style="margin-bottom: 1em;" class="col-12
+                            col-sm-12
+                            col-md-6
+                            col-lg-6
+                            col-xl-12">
+                  <a href="mailto:piotrm@gmail.com">piotrm@gmail.com</a><br/>
+                  <a href="https://github.com/piotrm0"><span>piotrm0</span></a>
+                  <span class="icon"><img src="images/icon_github.svg"/></span><br/>
+                  <a href="https://bitbucket.org/piotrm"><span>piotrm</span></a>
+                  <span class="icon"><img src="images/icon_bitbucket.svg"/></span><br/>
+                  <a href="https://twitter.com/piotrm0"><span>piotrm0</span></a>
+                  <span class="icon"><img src="images/icon_twitter.svg"/></span><br/>
+                </div>
+                
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-12">
+                  <a href="http://fairlyaccountable.org">SPF@CMU</a><br/>
+                  <a href="http://www.cmu.edu">CMU</a><br/>
+                  <a href="http://www.cylab.cmu.edu">CyLab</a><br/>
+                  <a href="http://www.cs.umd.edu/projects/PL/">PLUM</a><br/>
+                </div>
               </div>
-
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <a href="http://fairlyaccountable.org">SPF@CMU</a><br/>
-                <a href="http://www.cmu.edu">CMU</a><br/>
-                <a href="http://www.cylab.cmu.edu">CyLab</a><br/><br/>
-                <a href="http://www.cs.umd.edu/projects/PL/">PLUM</a><br/>
-              </div>
+              
             </div>
           </div>
         </div>
         
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-          I'm a post-doc
-          at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.cylab.cmu.edu">CyLab</a>.
-          Previously I was a PhD student and a post-doc in the
-          Programming Languages at University of Maryland
-          (<a href="http://www.cs.umd.edu/projects/PL/">PLUM</a>).
+        <div class="col-12
+                    col-sm-7
+                    col-md-8
+                    col-lg-8
+                    col-xl-9">
 
-          <p><h2>current projects</h2>
+          <div class="row">
+          
+          <div class="col-12
+                      col-sm-12
+                      col-md-12
+                      col-lg-12
+                      col-xl-6">
+
+            <img style="margin-bottom:20px;" class="rounded img-fluid" src="images/science.jpeg"/>
+            
+            I'm a post-doc
+            at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.cylab.cmu.edu">CyLab</a>.
+            Previously I was a PhD student and a post-doc in the
+            Programming Languages at University of Maryland
+            (<a href="http://www.cs.umd.edu/projects/PL/">PLUM</a>).
+          </div>
+
+          <div class="col-12
+                      col-sm-12
+                      col-md-12
+                      col-lg-12
+                      col-xl-6">
+          <h2>current projects</h2>
             <ul>
               <li><b>privacy and fairness for machine learning</b><br/>
                 (with Anupam Datta, Matt Fredriskon, students Shayak Sen, Gihyuk Ko)
@@ -65,9 +134,10 @@
                 (with PLUM)
               </li>
             </ul>
-          </p>
+          </div>
 
-          <p><h2>recent projects</h2>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <h2>recent projects</h2>
             <ul>
               <li><b>quantitative information flow for dynamic data</b><br/>
                 (with Mario Alvim, Michael Hicks, Michael Clarkson)
@@ -85,14 +155,17 @@
                 (with Michael Hicks, Stephen Magill)
               </li>
               
-              <li><b>secure software development contest</b>: <a href="http://builditbreakit.org/">Builid It,Break It, Fix It</a><br/>
+              <li><b>secure software development contest</b>: <a href="http://builditbreakit.org/">Builid It,Break It, Fix It<br/>
+                <img src="https://builditbreakit.org/static/img/builditbreakitfixit.svg?etag=3duNvwTN" class="img-fluid"/></a><br/>
                 (with PLUM)
+
               </li>
             </ul>
-          </p>
+          </div>
           <!-- <p>&lt;-- this guy</p> -->
-          
-          <p><h2>service</h2>
+
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <h2>service</h2>
             <ul>
               <li><b>committees</b>:
                 <ul>
@@ -130,93 +203,93 @@
                 </ul>
               </li>
             </ul>
-          </p>
-      
-      <p><h2>topics</h2>
-        <TMPL_INCLUDE NAME="../build/pubs/topics.shtml"/></p>
-      
-      <p><h2>papers</h2>
-        <TMPL_INCLUDE NAME="../build/pubs/papers.shtml"/></p>
+          </div>
 
-      <h2>talks</h2>
-        <ol class="list-unstyled">
-          <li><a href="docs/mardziel15hcss.pres.pptx">
-              <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
-              Models and Games for Quantifying Vulnerability of Secret
-              Information</a> <br/>presented at the <b>2015 Conference
-              on Hight Confidence Software and Systems (HCSS)</b>
-          </li>
-          <li><a href="docs/mardziel15dagstuhl.pres.pptx">
-              <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
-              Probabilistic Programming for Security</a> <br/>
-            presented at the <b>Dagstuhl Seminar on Challenges and Trends
-              in Probabilistic Programming</b>
-          </li>
-          <li><a href="docs/mardziel15thesis.latest-pres.pptx">
-              <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
-              Modeling, Measuring, and Limiting Adversary
-              Knowledge</a><br/>
-            presented at <b>Galois</b>, March 2017<br/>
-            presented at <b>Microsoft Research</b>, Cambridge UK, February
-            2015<br/>
-            presented at <b>Applied Logic and Security Group</b> at <b>Worcester
-              Polytechnic Institute</b>, January 2015
-          </li>
-          <li><a href="docs/mardziel14loss.pres.pdf">
-              <span class="bigicon"><img src="images/icon_pdf.svg"/></span>
-              Adversary Gain vs. Defender Loss in Quantified Information
-              Flow</a><br/>
-            presented at <b>2014 Workshop on Foundations of Computer
-              Security (FCS)</b>, Vienna Austria
-          </li>
-          <li><a href="docs/mardziel14time.pres.pdf">
-              <span class="bigicon"><img src="images/icon_pdf.svg"/></span>
-              Quantifying Information Flow for Dynamic
-              Secrets</a><br/>
-            presented at <b>2014 IEEE Symposium on Security & Privacy (S&P)</b>, San Jose, CA<br/>
-              presented at the 2014 meeting of the <b>International Technology
-              Alliance</b>, Cardiff, UK
-          </li>
-          <li><a href="docs/mardziel12probabilistic.pres.pptx">
-              <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
-              Probabilistic Computation for Information
-              Security</a><br/>
-            presented at the <b>2012 NIPS Workshop on Probabilistic
-              Programming</b>, Lake Tahoe, NV
-          </li>
-          <li><a href="docs/mardziel12smc.pres.pptx">
-              <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
-              Knowledge-Oriented Secure Multiparty
-              Computation</a><br/>
-            presented at the <b>2012 Workshop on Programming Languages
-              and Analysis for Security (PLAS)</b>
-          </li>
-          <li><a href="docs/mardziel11dynamic.pres.pptx">
-            <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
-            Dynamic Enforcement of Knowledge-based Security Policies
-            (using Probabilistic Abstract Interpretation)</a><br/>
-            presented at the <b>2011 Symposium on Computer Security
-              Foundations (CSF)</b>, Paris, France<br/>
-            presented at the April 2011 <b>NJ Programming Languages and
-              Systems Seminar (NJPLS)</b>, Princeton, NJ<br/>
-            presented at the <b>George Washington University Computer Security Seminar</b>
-          </li>
-        </ol>
-        
-      <p><h2>tech-reports</h2>
-        <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/></p>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <h2>topics</h2>
+              <TMPL_INCLUDE NAME="../build/pubs/topics.shtml"/>
+          </div>
+      
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <h2>papers</h2>
+              <TMPL_INCLUDE NAME="../build/pubs/papers.shtml"/>
+          </div>
 
-    </div>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <h2>talks</h2>
+            <ol class="list-unstyled">
+              <li><a href="docs/mardziel15hcss.pres.pptx">
+                  <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
+                  Models and Games for Quantifying Vulnerability of Secret
+                  Information</a> <br/>presented at the <b>2015 Conference
+                  on Hight Confidence Software and Systems (HCSS)</b>
+              </li>
+              <li><a href="docs/mardziel15dagstuhl.pres.pptx">
+                  <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
+                  Probabilistic Programming for Security</a> <br/>
+                presented at the <b>Dagstuhl Seminar on Challenges and Trends
+                  in Probabilistic Programming</b>
+              </li>
+              <li><a href="docs/mardziel15thesis.latest-pres.pptx">
+                  <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
+                  Modeling, Measuring, and Limiting Adversary
+                  Knowledge</a><br/>
+                presented at <b>Galois</b>, March 2017<br/>
+                presented at <b>Microsoft Research</b>, Cambridge UK, February
+                2015<br/>
+                presented at <b>Applied Logic and Security Group</b> at <b>Worcester
+                  Polytechnic Institute</b>, January 2015
+              </li>
+              <li><a href="docs/mardziel14loss.pres.pdf">
+                  <span class="bigicon"><img src="images/icon_pdf.svg"/></span>
+                  Adversary Gain vs. Defender Loss in Quantified Information
+                  Flow</a><br/>
+                presented at <b>2014 Workshop on Foundations of Computer
+                  Security (FCS)</b>, Vienna Austria
+              </li>
+              <li><a href="docs/mardziel14time.pres.pdf">
+                  <span class="bigicon"><img src="images/icon_pdf.svg"/></span>
+                  Quantifying Information Flow for Dynamic
+                  Secrets</a><br/>
+                presented at <b>2014 IEEE Symposium on Security & Privacy (S&P)</b>, San Jose, CA<br/>
+                presented at the 2014 meeting of the <b>International Technology
+                  Alliance</b>, Cardiff, UK
+              </li>
+              <li><a href="docs/mardziel12probabilistic.pres.pptx">
+                  <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
+                  Probabilistic Computation for Information
+                  Security</a><br/>
+                presented at the <b>2012 NIPS Workshop on Probabilistic
+                  Programming</b>, Lake Tahoe, NV
+              </li>
+              <li><a href="docs/mardziel12smc.pres.pptx">
+                  <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
+                  Knowledge-Oriented Secure Multiparty
+                  Computation</a><br/>
+                presented at the <b>2012 Workshop on Programming Languages
+                  and Analysis for Security (PLAS)</b>
+              </li>
+              <li><a href="docs/mardziel11dynamic.pres.pptx">
+                  <span class="bigicon"><img src="images/icon_ppt.svg"/></span>
+                  Dynamic Enforcement of Knowledge-based Security Policies
+                  (using Probabilistic Abstract Interpretation)</a><br/>
+                presented at the <b>2011 Symposium on Computer Security
+                  Foundations (CSF)</b>, Paris, France<br/>
+                presented at the April 2011 <b>NJ Programming Languages and
+                  Systems Seminar (NJPLS)</b>, Princeton, NJ<br/>
+                presented at the <b>George Washington University Computer Security Seminar</b>
+              </li>
+            </ol>
+          </div>
+          
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <p><h2>tech-reports</h2>
+              <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/></p>
+          </div>
+          
+          </div>
+        </div>
       </div>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-              integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-              crossorigin="anonymous"></script>
-    
-
       
   </body>
 </html>
