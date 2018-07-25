@@ -1,0 +1,57 @@
+- url: docs/mardziel15hcss.pres.pptx
+  icon: images/icon_ppt.svg
+  title: Models and Games for Quantifying Vulnerability of Secret Information
+  presented: >
+    presented at the <b>2015 Conference on Hight Confidence Software and Systems (HCSS)</b>
+
+- url: docs/mardziel15dagstuhl.pres.pptx
+  icon: images/icon_ppt.svg
+  title: Probabilistic Programming for Security
+  presented: >
+    presented at the <b>Dagstuhl Seminar on Challenges and Trends in Probabilistic Programming</b>
+
+- url: docs/mardziel15thesis.latest-pres.pptx
+  icon: images/icon_ppt.svg
+  title: Modeling, Measuring, and Limiting Adversary Knowledge
+  presented: >
+    presented at <b>Galois</b>, March 2017<br/>
+    presented at <b>Microsoft Research</b>, Cambridge UK, February 2015<br/>
+    presented at <b>Applied Logic and Security Group</b> at <b>Worcester Polytechnic
+    Institute</b>, January 2015"
+
+- url: docs/mardziel14loss.pres.pdf
+  icon: images/icon_pdf.svg
+  title: Adversary Gain vs. Defender Loss in Quantified Information Flow
+  presented: >
+    presented at <b>2014 Workshop on Foundations of Computer Security (FCS)</b>, Vienna Austria
+
+- url: docs/mardziel14time.pres.pdf
+  icon: images/icon_pdf.svg
+  title: Quantifying Information Flow for Dynamic Secrets
+  presented: >
+    presented at <b>2014 IEEE Symposium on Security & Privacy (S&P)</b>, San Jose, CA<br/>
+    presented at the 2014 meeting of the <b>International Technology Alliance</b>, Cardiff, UK
+
+- url: docs/mardziel12probabilistic.pres.pptx
+  icon: images/icon_ppt.svg
+  title: Probabilistic Computation for Information Security
+  presented: >
+    presented at the <b>2012 NIPS Workshop on Probabilistic Programming</b>, Lake Tahoe, NV
+
+- url: docs/mardziel12smc.pres.pptx
+  icon: images/icon_ppt.svg
+  title: Knowledge-Oriented Secure Multiparty Computation
+  presented: >
+    presented at the <b>2012 Workshop on Programming Languages and Analysis for Security (PLAS)</b>
+
+- url: docs/mardziel11dynamic.pres.pptx
+  icon: images/icon_ppt.svg
+  title: >
+    Dynamic Enforcement of Knowledge-based Security Policies (using Probabilistic Abstract
+    Interpretation)
+  presented: >
+    presented at the <b>2011 Symposium on Computer Security Foundations (CSF)</b>, Paris,
+      France<br/>
+    presented at the April 2011 <b>NJ Programming Languages and Systems Seminar (NJPLS)</b>,
+      Princeton, NJ<br/>
+    presented at the <b>George Washington University Computer Security Seminar</b>

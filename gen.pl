@@ -15,6 +15,7 @@ my $DIR_SOURCE = $Config::DIR_SOURCE;
 
 use HTML::Template;
 use File::Basename;
+use YAML;
 
 use Data::Dumper;
 use strict;
@@ -44,6 +45,22 @@ sub gen_from_templates {
     my $t = get_template($DIR_SOURCE . "/" . $file,
                          $URL_ROOT,
                          $SITE_TITLE);
+
+    for my $par ($t->param()) {
+	if ($par =~ m/^data_(.*?)$/i) {
+	    my $data = $1;
+	    my $dfile = "$data.yaml";
+	    if (-e $dfile) {
+		my $params = YAML::LoadFile($dfile);
+		print "filling parameter $par from $dfile ...\n";
+		print "  read a/an " . ref($params) . "...\n";
+		$t->param($par => $params);
+	    } else {
+		die("cannot find datafile $dfile needed for generating $file\n")
+	    }
+	}
+    }
+
     push (@$ret, {filename => "$DIR_TARGET/$basename.html",
                   content  => $t->output()});
   }

@@ -10,11 +10,23 @@
     float: left;
     width: 32px;
     height: 32px;
-    margin-left: -45px;
+    /*margin-left: -45px;*/
     vertical-align: top;
 }
 .bigicon > svg path, .bigicon img path {
     fill: #828282;
+}
+
+.talks .icon {
+}
+
+.talks .desc {
+    padding-left: 30pt;
+}
+
+.talks li {
+    clear: both;
+    padding: 5pt;
 }
 
 h1 {
@@ -33,16 +45,18 @@ body {
     margin-top: 15px;
 }
 
+/*
 ul {
     padding: 0em;
     margin: 0em;
-    
+
     background: #f0f0f0;
     padding-bottom: 5px;
     margin-left: 0px;
     border-left: 5px solid gray;
 }
-
+*/
+/*
 ul li {
     margin: 0.25em;
     margin-left: 1.5em;
@@ -54,15 +68,23 @@ ol {
     background: #f0f0f0;
     border-left: 5px solid gray;
 }
-
+*/
+/*
 ol.list-unstyled {
     margin-left: 25px;
+    list-style-type: none;
 }
 ol.list-unstyled li {
-/*    list-style: decimal outside;*/
-    display: list-item;
+/*    list-style: decimal outside;
+    display: list-item;*/
+    list-style-type: none;
     padding: 5px;
 }
+
+ul.list-unstyled {
+    list-style-type: none;
+}
+*/
 
 body {
     font-size: 14px;
