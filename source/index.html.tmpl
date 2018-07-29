@@ -26,6 +26,24 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous">
     </script>
+
+    <style type="text/css">
+      .huh:hover{
+        transition: 20s;
+        transition-timing-function: ease-in-out;
+        transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+      }
+
+      .huh:not(:hover) {
+        transition: 0.5s;
+        transition-timing-function: cubic-bezier(0.0, 1.6, 0.9, 1.0);
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+      }
+    </style>
   </head>
 
   <TMPL_INCLUDE NAME="templates/head.html.tmpl"/>
@@ -47,8 +65,8 @@
                         col-lg-12
                         col-xl-12">
 
-              <img style="margin-bottom:1em;" class="rounded img-fluid"
-                   src="images/mug_2017-10-19.jpg"/><br/>
+              <img style="margin-bottom:1em;" class="huh rounded img-fluid"
+                   src="images/self_perplexed.jpeg"/><br/>
               <img style="margin-bottom:1em;" class="rounded img-fluid"
                    src="images/science.jpeg"/>
             </div>
