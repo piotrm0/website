@@ -141,7 +141,7 @@
                       col-lg-12
                       col-xl-6">
           <h2>currently</h2>
-            <ul>
+            <ul class="list-unstyled status">
               <li><b>privacy and fairness for machine learning</b><br/>
                 (with Anupam Datta, Matt Fredriskon, students Shayak Sen, Gihyuk Ko)
               </li>
@@ -162,7 +162,7 @@
 
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <h2>recently</h2>
-            <ul>
+            <ul class="list-unstyled status">
               <li><b>quantitative information flow for dynamic data</b><br/>
                 (with Mario Alvim, Michael Hicks, Michael Clarkson)
               </li>
@@ -190,17 +190,16 @@
 
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <h2>service</h2>
-            <ul>
-              <li><b>committees</b>:
-                <ul>
+            <h3>committees</h3>
+                <ul class="list-unstyled service">
                   <li><a href="https://www.ieee-security.org/TC/SP2019/">2019 IEEE Symposium on Privacy and Security (S&P/Oakland)</a></li>
                   <li><a href="http://plas2018.dcc.ufmg.br/">2018 ACM Workshop on Programming Languages and Analysis of Security (PLAS)</a></li>
                   <li><a href="http://wpes.tech/">2018 Workshop on Privacy in Electronic Society (WPES)</a></li>
                   <li><a href="https://fatconference.org/">(2018,2019) Conference on Fairness, Accountability, and Transparency (FAT*)</a></li>
                   <li>2016 Workshop on Foundations of Computer Security (FCS)</li>
-              </ul></li>
-              <li><b>expert/external/sub/etc. reviewer</b>
-                <ul>
+              </ul>
+              <h3>expert/external/sub/etc. reviewer</h3>
+                <ul class="list-unstyled service">
                   <li><b>conferences</b>:
                     IEEE S&P<sub>(2015-2018)</sub>,
                     IEEE CSF<sub>(2013-2018)</sub>,
@@ -224,12 +223,11 @@
                     DAT<sub>(2016)</sub>,
                     MILCOM<sub>(2016)</sub>
                   </li>
-                  <li><b>panels</b>:
-                    NSF Panel<sub>(~2018)</sub>
-                  </li>
                 </ul>
-              </li>
-            </ul>
+		<h3>other service</h3>
+		<ul class="list-unstyled service">
+		  <li><b>panels</h>: NSF Panel<sub>(~2018)</sub></li>
+               </ul>
           </div>
 
           <!--
@@ -241,7 +239,9 @@
 
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
             <h2>papers</h2>
+	    <ol class="list-unstyled papers">
               <TMPL_INCLUDE NAME="../build/pubs/papers.shtml"/>
+	    </ol>
           </div>
 
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
@@ -271,8 +271,10 @@
           </div>
 
           <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <p><h2>tech-reports</h2>
-              <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/></p>
+            <h2>tech-reports</h2>
+	    <ol class="list-unstyled papers">
+              <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/>
+	    </ol>
           </div>
 
           </div>

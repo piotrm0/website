@@ -17,6 +17,30 @@
     fill: #828282;
 }
 
+.papers .desc {
+    padding-left: 10pt
+}
+.papers li {
+    clear: both;
+    padding: 2pt;
+}
+
+.service .desc {
+    padding-left: 10pt
+}
+.service li {
+    clear: both;
+    padding: 2pt;
+}
+
+.status .desc {
+    padding-left: 10pt
+}
+.status li {
+    clear: both;
+    padding: 2pt;
+}
+
 .talks .icon {
 }
 
@@ -28,6 +52,8 @@
     clear: both;
     padding: 5pt;
 }
+
+
 
 h1 {
     font-size: 20pt;
