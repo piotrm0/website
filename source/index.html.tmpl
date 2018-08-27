@@ -27,6 +27,20 @@
             crossorigin="anonymous">
     </script>
 
+    <script type="text/javascript">
+      function toggleSummary() {
+        var simple = document.getElementById("simple");
+        var complex = document.getElementById("complex");
+        if (simple.style.display === "none") {
+          simple.style.display = "inline";
+          complex.style.display = "none";
+        } else {
+          simple.style.display = "none";
+          complex.style.display = "inline";
+        }
+      }
+    </script>
+
     <style type="text/css">
       .nobreak {
         white-space: nowrap;
@@ -72,7 +86,8 @@
               <img style="margin-bottom:1em;" class="huh rounded img-fluid"
                    src="images/self_perplexed.jpeg"/><br/>
               <img style="margin-bottom:1em;" class="rounded img-fluid"
-                   src="images/science.jpeg"/>
+                   src="images/science.jpeg"
+		   onclick="toggleSummary();"/>
             </div>
 
             <div class="col-6
@@ -132,16 +147,24 @@
 
               <h2>Piotr (Peter) Mardziel</h2>
 
+	      <p>
             I'm a system<b>s</b> scientist
-            at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.ece.cmu.edu">ECE</a> where
-            I work on transparency and accountability in machine learning with applications to
-            privacy and fairness.
+            at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.ece.cmu.edu">ECE</a> where <span id="complex">
+	      I work on transparency and accountability in machine learning with applications to
+              privacy and fairness.
+	    </span><span id="simple" style="display: none; font-family: 'Comic Sans MS', cursive, sans-serif;">
+	      I work on making computers explain themselves. I want to make sure computers do not
+	      learn sad things from the sad world or remember things about us we would rather they
+	      not. This makes the world not as sad and computers not as bad.
+	    </span>
+	    </p>
 
-
+	      <p>
             Previously I was a PhD student and post-doc in the Programming Languages at University
             of Maryland (<a href="http://www.cs.umd.edu/projects/PL/">PLUM</a>) group where I
             worked on probabilistic programming with applications for privacy and quantitative
             information flow.
+	    </p>
           </div>
 
           <div class="col-12
