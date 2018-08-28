@@ -53,24 +53,6 @@
     padding: 5pt;
 }
 
-
-
-h1 {
-    font-size: 20pt;
-}
-
-h2 {
-    font-size: 18pt;
-}
-
-h3 {
-    font-size: 15pt;
-}
-
-body {
-    margin-top: 15px;
-}
-
 /*
 ul {
     padding: 0em;
@@ -111,7 +93,3 @@ ul.list-unstyled {
     list-style-type: none;
 }
 */
-
-body {
-    font-size: 14px;
-}

@@ -1,322 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <!--<link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">-->
+<head>
 
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
+<script type="text/javascript">
+  function toggleSummary() {
+    var simple = document.getElementById("simple");
+    var complex = document.getElementById("complex");
+    if (simple.style.display === "none") {
+      simple.style.display = "inline";
+      complex.style.display = "none";
+    } else {
+      simple.style.display = "none";
+      complex.style.display = "inline";
+    }
+  }
+</script>
 
-    <link rel="stylesheet" href="css/style_min.css"/>
+<style type="text/css">
+  h2 {
+    border-bottom: 0.5ex solid red;
+  }
+  h3 {
+    border-bottom: 0.25ex solid red;
+  }
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous">
-    </script>
+  .small-bar {
+    border-bottom: 0.25ex solid red;
+  }
 
-    <script type="text/javascript">
-      function toggleSummary() {
-        var simple = document.getElementById("simple");
-        var complex = document.getElementById("complex");
-        if (simple.style.display === "none") {
-          simple.style.display = "inline";
-          complex.style.display = "none";
-        } else {
-          simple.style.display = "none";
-          complex.style.display = "inline";
-        }
-      }
-    </script>
+  .nobreak {
+    white-space: nowrap;
+  }
 
-    <style type="text/css">
-      .nobreak {
-        white-space: nowrap;
-      }
+  .debug {
+    border: 1px solid black;
+  }
 
-      .huh:hover{
-        transition: 180s;
-        transition-timing-function: ease-in-out;
-        transform:rotate(90deg);
-        -ms-transform:rotate(90deg);
-        -webkit-transform:rotate(90deg);
-      }
+  .huh:hover{
+    transition: 180s;
+    transition-timing-function: ease-in-out;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+  }
 
-      .huh:not(:hover) {
-        transition: 0.5s;
-        transition-timing-function: cubic-bezier(0.0, 1.6, 0.9, 1.0);
-        transform:rotate(0deg);
-        -ms-transform:rotate(0deg);
-        -webkit-transform:rotate(0deg);
-      }
-    </style>
-  </head>
+  .huh:not(:hover) {
+    transition: 0.5s;
+    transition-timing-function: cubic-bezier(0.0, 1.6, 0.9, 1.0);
+    transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    -webkit-transform:rotate(0deg);
+  }
+</style>
+</head>
 
-  <TMPL_INCLUDE NAME="templates/head.html.tmpl"/>
-  <body>
-    <div class="container">
+<TMPL_INCLUDE NAME="templates/head.html.tmpl"/>
 
-      <div class="row">
-        <div class="col-12    col-offset-0
-                    col-sm-12 col-sm-offset-0
-                    col-md-4  col-md-offset-0
-                    col-lg-3  col-lg-offset-0
-                    col-xl-2  col-xl-offset-0">
+<body>
 
-          <div class="row">
+<nav class="navbar sticky-top navbar-dark bg-dark navbar-expand">
 
-            <div class="col-6
-                        col-sm-6
-                        col-md-12
-                        col-lg-12
-                        col-xl-12">
+  <span class="d-none d-md-block navbar-brand">Piotr (Peter) Mardziel</span>
+  <span class="d-none d-sm-block d-md-none navbar-brand">Piotr (Peter)</span>
+  <span class="d-block d-sm-none navbar-brand">Peter</span>
 
-              <img style="margin-bottom:1em;" class="huh rounded img-fluid"
-                   src="images/self_perplexed.jpeg"/><br/>
-              <img style="margin-bottom:1em;" class="rounded img-fluid"
-                   src="images/science.jpeg"
-		   onclick="toggleSummary();"/>
-            </div>
+  <button type="button" class="navbar-toggler"
+	  data-toggle="collapse"
+          data-target="#navbar"
+	  aria-controls="navbarSupportedContent"
+	  aria-label="Toggle navigation"
+          aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-            <div class="col-6
-                        col-sm-6
-                        col-md-12
-                        col-lg-12
-                        col-xl-12">
+  <div class="collapse navbar-collapse" id="navbar">
+    <ul class="navbar-nav mr-auto">
+      <li class="d-none d-md-block nav-item">
+	<a href="#about1"
+	   class="nav-link">
+	  About
+	</a>
+      </li>
+      <li class="d-block d-md-none nav-item">
+	<a href="#about2"
+	   class="nav-link">
+	  About
+	</a>
+      </li>
+      <li class="nav-item">
+	<a href="#currently"
+	   class="nav-link">
+	  Currently
+	</a>
+      </li>
+      <li class="nav-item">
+	<a href="#recently"
+	   class="nav-link">
+	  Recently
+	</a>
+      </li>
+      <li class="nav-item">
+	<a href="#service"
+	   class="nav-link">
+	  Service
+	</a>
+      </li>
+      <li class="nav-item">
+	<a href="#papers"
+	   class="nav-link">
+	  Papers
+	</a>
+      </li>
+      <li class="nav-item">
+	<a href="#talks"
+	   class="nav-link">
+	  Talks
+	</a>
+      </li>
+      <li class="nav-item">
+	<a href="#tech-reports"
+	   class="nav-link">
+	  Tech-reports
+	</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-              <div class="row">
-                <div style="margin-bottom: 1em;"
-		     class="mr-1
-			    col-12
-                            col-sm-12
-                            col-md-6
-                            col-lg-6
-                            col-xl-12">
-		  <span class="nobreak">CMU Silicon Valley</span>, <span class="nobreak">B23 114</span><br/>
-                  <a href="mailto:piotrm@gmail.com">piotrm@gmail.com</a><br/>
-                  <a href="https://github.com/piotrm0"><span>piotrm0</span></a>
-                  <span class="icon"><img src="images/icon_github.svg"/></span><br/>
-                  <a href="https://bitbucket.org/piotrm"><span>piotrm</span></a>
-                  <span class="icon"><img src="images/icon_bitbucket.svg"/></span><br/>
-                  <a href="https://twitter.com/piotrm0"><span>piotrm0</span></a>
-                  <span class="icon"><img src="images/icon_twitter.svg"/></span><br/>
-                </div>
+<div class="container mt-3">
+<div class="row debug">
+<div class="col-12
+            col-sm-12
+            col-md-5
+            col-lg-4
+            col-xl-3">
 
-                <div class="col-12
-			    col-sm-12
-			    col-md-6
-			    col-lg-6
-			    col-xl-12">
-                  <a href="http://fairlyaccountable.org">SPF@CMU</a><br/>
-                  <a href="http://www.cmu.edu">CMU</a><br/>
-                  <a href="http://www.ece.cmu.edu">CMU ECE</a><br/>
-                  <a href="http://www.cylab.cmu.edu">CyLab</a><br/>
-                  <a href="http://www.cs.umd.edu/projects/PL/">PLUM</a><br/>
-                </div>
-              </div>
+  <div class="row debug justify-content-center">
 
-            </div>
-          </div>
+    <div class="col-8 debug
+                col-sm-6
+                col-md-12
+                col-lg-12
+                col-xl-12">
+
+      <img class="huh rounded img-fluid mb-2" src="images/self_perplexed.jpeg"/><br/>
+      <img class="rounded img-fluid mb-2" src="images/science.jpeg"
+	   onclick="toggleSummary();"/>
+    </div>
+
+    <div class="col-12 debug
+                col-sm-6
+                col-md-12
+                col-lg-12
+                col-xl-12">
+    <h2 class="d-block d-md-none">Piotr (Peter) Mardziel</h2>
+
+      <div class="row debug">
+        <div class="col-6 small-bar
+                    col-sm-12
+                    col-md-6
+                    col-lg-6
+                    col-xl-6">
+	  <span class="nobreak">CMU Silicon Valley</span><br/>
+	  Office: <span class="nobreak">B23 114</span><br/>
+          <a href="mailto:piotrm@gmail.com">piotrm@gmail.com</a><br/>
+          <a href="https://github.com/piotrm0"><span>piotrm0</span></a>
+          <span class="icon"><img src="images/icon_github.svg"/></span><br/>
+          <a href="https://bitbucket.org/piotrm"><span>piotrm</span></a>
+          <span class="icon"><img src="images/icon_bitbucket.svg"/></span><br/>
+          <a href="https://twitter.com/piotrm0"><span>piotrm0</span></a>
+          <span class="icon"><img src="images/icon_twitter.svg"/></span><br/>
         </div>
 
-        <div class="col-12
-                    col-sm-12
-                    col-md-8
-                    col-lg-9
-                    col-xl-10">
-
-          <div class="row">
-
-          <div class="col-12
-                      col-sm-12
-                      col-md-12
-                      col-lg-12
-                      col-xl-6">
-
-              <h2>Piotr (Peter) Mardziel</h2>
-
-	      <p>
-            I'm a system<b>s</b> scientist
-            at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.ece.cmu.edu">ECE</a> where <span id="complex">
-	      I work on transparency and accountability in machine learning with applications to
-              privacy and fairness.
-	    </span><span id="simple" style="display: none; font-family: 'Comic Sans MS', cursive, sans-serif;">
-	      I work on making computers explain themselves. I want to make sure computers do not
-	      learn sad things from the sad world or remember things about us we would rather they
-	      not. This makes the world not as sad and computers not as bad.
-	    </span>
-	    </p>
-
-	      <p>
-            Previously I was a PhD student and post-doc in the Programming Languages at University
-            of Maryland (<a href="http://www.cs.umd.edu/projects/PL/">PLUM</a>) group where I
-            worked on probabilistic programming with applications for privacy and quantitative
-            information flow.
-	    </p>
-          </div>
-
-          <div class="col-12
-                      col-sm-12
-                      col-md-12
-                      col-lg-12
-                      col-xl-6">
-          <h2>currently</h2>
-            <ul class="list-unstyled status">
-              <li><b>privacy and fairness for machine learning</b><br/>
-                (with Anupam Datta, Matt Fredriskon, students Shayak Sen, Gihyuk Ko)
-              </li>
-
-              <li><b>privacy</b><br/>
-                (with Anupam Datta, Michael Tschantz, Sebastian Benthall, Helen Nissenbaum)
-              </li>
-
-              <li><b>transparency and interpretable machine learning</b><br/>
-                (with Anupam Datta, students Sophia Kovalova, Raj Gupta)
-              </li>
-
-              <li><b>static analysis, abstract interpretation of java bytecode</b><br/>
-                (with PLUM)
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <h2>recently</h2>
-            <ul class="list-unstyled status">
-              <li><b>quantitative information flow for dynamic data</b><br/>
-                (with Mario Alvim, Michael Hicks, Michael Clarkson)
-              </li>
-
-              <li><b>game theoretic analysis of password authentication</b><br/>
-                (with MHR Khouzani, Carlos Cid, Mudhakar Srivatsa)
-              </li>
-
-              <li><b>inference control</b><br/>
-                (with Michael Hicks, Stephen Magill, Mudhakar Srivatsa, Jon Katz)
-              </li>
-
-              <li><b>abstract interpretation of probabilistic program semantics</b><br/>
-                (with Michael Hicks, Stephen Magill)
-              </li>
-
-              <li><b>secure software development
-                contest</b>: <a href="http://builditbreakit.org/">Builid It,Break It, Fix It<br/>
-                <img src="https://builditbreakit.org/static/img/builditbreakitfixit.svg?etag=3duNvwTN"
-                class="img-fluid"/></a><br/> (with PLUM)
-
-              </li>
-            </ul>
-          </div>
-          <!-- <p>&lt;-- this guy</p> -->
-
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <h2>service</h2>
-            <h3>committees</h3>
-                <ul class="list-unstyled service">
-                  <li><a href="https://www.ieee-security.org/TC/SP2019/">2019 IEEE Symposium on
-                  Privacy and Security (S&P/Oakland)</a></li>
-                  <li><a href="http://plas2018.dcc.ufmg.br/">2018 ACM Workshop on Programming
-                  Languages and Analysis of Security (PLAS)</a></li>
-                  <li><a href="http://wpes.tech/">2018 Workshop on Privacy in Electronic Society
-                  (WPES)</a></li>
-                  <li><a href="https://fatconference.org/">(2018,2019) Conference on Fairness,
-                  Accountability, and Transparency (FAT*)</a></li>
-                  <li>2016 Workshop on Foundations of Computer Security (FCS)</li>
-              </ul>
-              <h3>expert/external/sub/etc. reviewer</h3>
-                <ul class="list-unstyled service">
-                  <li><b>conferences</b>:
-                    IEEE S&P<sub>(2015-2018)</sub>,
-                    IEEE CSF<sub>(2013-2018)</sub>,
-                    ACM CCS<sub>(2016-2017)</sub>,
-                    ACM ASIACCS<sub>(2014)</sub>,
-                    POPL<sub>(2013,2015)</sub>,
-                    POST<sub>(2018)</sub>,
-                    ICALP<sub>(2016)</sub>,
-                    NDSS<sub>(2016-2017)</sub>
-                  </li>
-                  <li><b>journals</b>:
-                    Journal of Computer Security<sub>(~2017)</sub>,
-                    Journal of Computer and System Sciences<sub>(~2015)</sub>,
-                    Journal of Approximate Reasoning<sub>(~2017)</sub>,
-                    Theoretical Computer Science<sub>(~2017)</sub>,
-                    Logical Methods in Computer Science<sub>(~2017)</sub>
-                  </li>
-                  <li><b>workshops/other</b>:
-                    ACM AISec<sub>(2017)</sub>,
-                    FATML<sub>(2016)</sub>,
-                    DAT<sub>(2016)</sub>,
-                    MILCOM<sub>(2016)</sub>
-                  </li>
-                </ul>
-		<h3>other service</h3>
-		<ul class="list-unstyled service">
-		  <li><b>panels</h>: NSF Panel<sub>(~2018)</sub></li>
-               </ul>
-          </div>
-
-          <!--
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <h2>topics</h2>
-              <TMPL_INCLUDE NAME="../build/pubs/topics.shtml"/>
-          </div>
-          -->
-
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <h2>papers</h2>
-	    <ol class="list-unstyled papers">
-              <TMPL_INCLUDE NAME="../build/pubs/papers.shtml"/>
-	    </ol>
-          </div>
-
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <h2>talks</h2>
-            <ol class="list-unstyled talks">
-	      <TMPL_LOOP NAME="data_talks">
-		<li>
-		  <div class="icon">
-		    <a href="<TMPL_VAR NAME="url"/>">
-                      <span class="bigicon"><img src="<TMPL_VAR NAME="icon"/>"/></span>
-		    </a>
-		  </div>
-		  <div class="desc">
-		    <div>
-                      <a href="<TMPL_VAR NAME="url"/>">
-			<TMPL_VAR NAME="title"/>
-		      </a>
-		    </div>
-		    <div>
-		      <TMPL_VAR NAME="presented"/>
-		    </div>
-		  </div>
-		</li>
-	      </TMPL_LOOP>
-
-            </ol>
-          </div>
-
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <h2>tech-reports</h2>
-	    <ol class="list-unstyled papers">
-              <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/>
-	    </ol>
-          </div>
-
-          </div>
+        <div class="col-6 debug
+		    col-sm-12
+		    col-md-6
+		    col-lg-6
+		    col-xl-6">
+          <a href="http://fairlyaccountable.org">SPF@CMU</a><br/>
+          <a href="http://www.cmu.edu">CMU</a><br/>
+          <a href="http://www.ece.cmu.edu">CMU ECE</a><br/>
+          <a href="http://www.cylab.cmu.edu">CyLab</a><br/>
+          <a href="http://www.cs.umd.edu/projects/PL/">PLUM</a><br/>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-12 debug
+            col-sm-12
+            col-md-7
+            col-lg-8
+            col-xl-9">
+
+  <div class="row debug">
+
+    <div class="col-12 debug
+                col-sm-12
+                col-md-12
+                col-lg-12
+                col-xl-12">
+
+      <h2 class="d-none d-md-block"><a name="about1">Piotr (Peter) Mardziel</a></h2>
+      <h2 class="d-block d-md-none"><a name="about2">About me</a></h2>
+      <p>
+        I'm a system<b>s</b> scientist
+        at <a href="http://www.cmu.edu">CMU</a> <a href="http://www.ece.cmu.edu">ECE</a>
+        where
+	<span id="complex"> I work on transparency and accountability in machine learning with
+          applications to privacy and fairness.
+	</span>
+	<span id="simple"
+	      style="display: none; font-family: 'Comic Sans MS', cursive, sans-serif;">
+	  I work on making computers explain themselves. I want to make sure computers do not learn
+	  sad things from the sad world or remember things about us we would rather they not. This
+	  makes the world not as sad and computers not as bad. Woof woof.
+	</span>
+      </p>
+
+      <p>
+        Previously I was a PhD student and post-doc in the Programming Languages at University of
+        Maryland (<a href="http://www.cs.umd.edu/projects/PL/">PLUM</a>) group where I worked on
+        probabilistic programming with applications for privacy and quantitative information flow.
+      </p>
+    </div>
+
+    <div class="col-12 debug
+                col-sm-12
+                col-md-12
+                col-lg-12
+                col-xl-12">
+      <h2><a name="currently">Currently<a/></h2>
+      <ul class="row">
+	<li class="col-12 col-xl-6">
+	  <b>CMU ECE 18-734: Foundations of Privacy <a href="https://www.archive.ece.cmu.edu/~ece734/">Fall 2018</a></b>
+	</li>
+        <li class="col-12 col-xl-6">
+	  <b>Privacy and fairness for machine learning</b><br/> (with Anupam Datta, Matt
+          Fredriskon, students Shayak Sen, Gihyuk Ko)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Transparency and interpretable machine learning</b><br/> (with Anupam Datta,
+          students Sophia Kovalova, Raj Gupta)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Static analysis, abstract interpretation of java bytecode</b><br/> (with PLUM)
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 debug">
+      <h2><a name="recently">Recently</a></h2>
+      <ul class="row">
+        <li class="col-12 col-xl-6">
+	  <b>Privacy with origin</b><br/> (with Anupam Datta, Michael Tschantz, Sebastian
+          Benthall, Helen Nissenbaum)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Quantitative information flow for dynamic data</b><br/> (with Mario Alvim, Michael
+          Hicks, Michael Clarkson)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Game theoretic analysis of password authentication</b><br/> (with MHR Khouzani,
+          Carlos Cid, Mudhakar Srivatsa)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Inference control</b><br/> (with Michael Hicks, Stephen Magill, Mudhakar Srivatsa,
+          Jon Katz)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Abstract interpretation of probabilistic program semantics</b><br/> (with Michael
+          Hicks, Stephen Magill)
+        </li>
+        <li class="col-12 col-xl-6">
+	  <b>Secure software development contest</b>: <a href="http://builditbreakit.org/">Builid
+            It,Break It, Fix It</a><br/> (with PLUM)
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 debug">
+      <h2><a name="service">Service</a></h2>
+      <div class="row">
+      <div class="col-12 col-xl-6">
+      <h3>Committees</h3>
+      <ul class="row">
+        <li class="col-12"><a href="https://www.ieee-security.org/TC/SP2019/">2019 IEEE Symposium on Privacy and
+            Security (S&P/Oakland)</a></li>
+        <li class="col-12"><a href="http://plas2018.dcc.ufmg.br/">2018 ACM Workshop on Programming Languages and
+            Analysis of Security (PLAS)</a></li>
+        <li class="col-12"><a href="http://wpes.tech/">2018 Workshop on Privacy in Electronic Society
+            (WPES)</a></li>
+        <li class="col-12"><a href="https://fatconference.org/">(2018,2019) Conference on Fairness,
+            Accountability, and Transparency (FAT*)</a></li>
+        <li class="col-12">2016 Workshop on Foundations of Computer Security (FCS)</li>
+      </ul>
+      </div>
+      <div class="col-12 col-xl-6">
+      <h3>Reviewer</h3>
+      <ul class="row">
+        <li class="col-12"><b>Conferences</b>:
+          IEEE S&P<sub>(2015-2018)</sub>,
+          IEEE CSF<sub>(2013-2018)</sub>,
+          ACM CCS<sub>(2016-2017)</sub>,
+          ACM ASIACCS<sub>(2014)</sub>,
+          POPL<sub>(2013,2015)</sub>,
+          POST<sub>(2018)</sub>,
+          ICALP<sub>(2016)</sub>,
+          NDSS<sub>(2016-2017)</sub>
+        </li>
+        <li class="col-12"><b>Journals</b>:
+          Journal of Computer Security<sub>(~2017)</sub>,
+          Journal of Computer and System Sciences<sub>(~2015)</sub>,
+          Journal of Approximate Reasoning<sub>(~2017)</sub>,
+          Theoretical Computer Science<sub>(~2017)</sub>,
+          Logical Methods in Computer Science<sub>(~2017)</sub>
+        </li>
+        <li class="col-12"><b>Workshops/other</b>:
+          ACM AISec<sub>(2017)</sub>,
+          FATML<sub>(2016)</sub>,
+          DAT<sub>(2016)</sub>,
+          MILCOM<sub>(2016)</sub>
+        </li>
+      </ul>
+      </div>
+      <div class="col-12 col-xl-6">
+      <h3>Other service</h3>
+      <ul class="row">
+	<li class="col-12"><b>Panels</b>: NSF Panel<sub>(~2018)</sub></li>
+      </ul>
+      </div>
+      </div>
+    </div>
+
+    <!--
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+          <h2>topics</h2>
+          <TMPL_INCLUDE NAME="../build/pubs/topics.shtml"/>
+        </div>
+        -->
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 debug">
+      <h2><a name="papers">Papers</a></h2>
+	<ol class="row">
+          <TMPL_INCLUDE NAME="../build/pubs/papers.shtml"/>
+	</ol>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 debug">
+      <h2><a name="talks">Talks</a></h2>
+      <ol class="row">
+	<TMPL_LOOP NAME="data_talks">
+	  <li class="debug col-12 col-xl-6">
+	    <!--div class="icon">
+	      <a href="<TMPL_VAR NAME="url"/>">
+                <span class="bigicon"><img src="<TMPL_VAR NAME="icon"/>"/></span>
+	      </a>
+	    </div-->
+	    <div class="debug">
+	      <div>
+                <a href="<TMPL_VAR NAME="url"/>">
+		  <TMPL_VAR NAME="title"/>
+		</a>
+	      </div>
+	      <div>
+		<TMPL_VAR NAME="presented"/>
+	      </div>
+	    </div>
+	  </li>
+	</TMPL_LOOP>
+      </ol>
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 debug">
+      <h2><a name="tech-reports">Tech-reports</a></h2>
+      <ol class="row debug">
+        <TMPL_INCLUDE NAME="../build/pubs/tech-reports.shtml"/>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+	integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+	integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	crossorigin="anonymous">
+</script>
 
   </body>
 </html>

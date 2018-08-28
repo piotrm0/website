@@ -1,8 +1,6 @@
-Piotr is a post-doctoral researcher at Carnegie Mellon University's
-CyLab . He is working on the problems of algorithmic transparency,
-fairness, and privacy in machine learning systems. Piotr completed his
-PhD studies at the University of Maryland, College Park and remained
-there as a post-doctoral researcher within the Programming Languages
-group until 2016. At UMD, he working on the problem of quantifying
-information security under varying adversarial assumptions. Piotr's
-works appeared in CSF, S&P, CCS, and others.
+Piotr is a systems scientist at Carnegie Mellon University, Silicon Valley. He is working on
+algorithmic transparency, fairness, and privacy in machine learning systems. Piotr completed his
+PhD studies at the University of Maryland, College Park and remained there as a post-doctoral
+researcher within the Programming Languages group until 2016. At UMD, he worked on quantifying
+information security under varying adversarial assumptions. Piotr's works appeared in S&P, CCS,
+CSF, POST, ESOP, and others.
